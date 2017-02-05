@@ -1,0 +1,16 @@
+{
+    "name": "Banking",
+    "alias": "banking",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Banking\\Providers\\BankingServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

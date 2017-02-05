@@ -1,0 +1,16 @@
+{
+    "name": "Workflows",
+    "alias": "workflows",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Workflows\\Providers\\WorkflowsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}
