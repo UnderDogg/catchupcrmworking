@@ -1,5 +1,4 @@
 <?php
 
-Route::group(['middleware' => 'web', 'prefix' => 'core', 'namespace' => 'Modules\Core\Http\Controllers'], function()
-{
+Route::group(['middleware' => 'web', 'prefix' => 'calendar', 'namespace' => 'Modules\Calendar\Http\Controllers'], function () {
 });

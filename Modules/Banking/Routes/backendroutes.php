@@ -1,5 +1,4 @@
 <?php
 
-Route::group(['middleware' => 'backend', 'prefix' => 'backend', 'namespace' => 'Modules\Core\Http\Controllers'], function()
-{
+Route::group(['middleware' => 'auth', 'prefix' => 'banking', 'namespace' => 'Modules\Banking\Http\Controllers'], function () {
 });

@@ -1,5 +1,4 @@
 <?php
 
-Route::group(['middleware' => 'backend', 'prefix' => 'backend', 'namespace' => 'Modules\Core\Http\Controllers'], function()
-{
+Route::group(['middleware' => 'backend', 'prefix' => 'employees', 'namespace' => 'Modules\Employees\Http\Controllers'], function () {
 });

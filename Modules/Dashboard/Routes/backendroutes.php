@@ -1,5 +1,7 @@
 <?php
 
-Route::group(['middleware' => 'backend', 'prefix' => 'backend', 'namespace' => 'Modules\Core\Http\Controllers'], function()
+Route::group(['middleware' => 'web', 'prefix' => 'dashboard', 'namespace' => 'Modules\Dashboard\Http\Controllers'], function()
 {
+    Route::get('/', 'DashboardController@index');
 });
+
