@@ -21,6 +21,7 @@
   "prefer-stable": true,
   "require": {
     "php": ">=5.6.4",
+    "laravel/framework": "5.3.x-dev",
     "ext-gd": "*",
     "ext-gmp": "*",
     "anahkiasen/former": "^4.0.5",
@@ -53,7 +54,6 @@
     "jonnyw/php-phantomjs": "4.*",
     "kalnoy/nestedset": "^4.1",
     "laracasts/presenter": "dev-master",
-    "laravel/framework": "5.3.x-dev",
     "laravel/socialite": "^2.0",
     "laravelcollective/html": "^5.2",
     "league/color-extractor": "0.3.*",
@@ -79,7 +79,7 @@
     "yajra/laravel-datatables-oracle": "~6.0"
   },
   "require-dev": {
-    "fzaninotto/faker": "~1.5",
+    "fzaninotto/faker": "~1.4",
     "mockery/mockery": "0.9.*",
     "phpunit/phpunit": "~5.0",
     "symfony/css-selector": "3.1.*",
