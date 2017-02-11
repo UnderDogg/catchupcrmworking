@@ -1,3 +1,76 @@
+
+# Configuration testing #
+#########################
+.env.mysql-*
+.env.pgsql
+.env.sqlite3
+
+# Package development #
+#######################
+packages/
+
+# Test/Dev pages #
+##################
+public/phpinfo.php
+/.project
+tests/_output/
+tests/_bootstrap.php
+tests/_support/_generated/
+
+# NodeJS #
+##########
+/node_modules
+phantomjsdriver.log
+config.js
+dump.rdb
+npm-debug.log
+
+# JetBrains IDE family #
+########################
+/.idea
+config/ide-helper.php
+/ninja.sublime-project
+/ninja.sublime-workspace
+/.phpstorm.meta.php
+/_ide_helper.php
+
+
+
+
+# composer stuff
+/c3.php
+
+_ide_helper.php
+ideconfig
+_ide_helper*
+.phpstorm.meta.php
+
+# Sublime files #
+#################
+*.sublime-project
+*.sublime-workspace
+
+
+
+#     Logs      #
+#################
+*.log
+*.sql
+
+
+
+
+
+# Laravel 5 #
+#############
+/vendor/
+.env
+.env~
+/.env
+/.env.development.php
+/.env.php
+
+storage/
 /config/staging
 /config/development
 /config/production
@@ -13,28 +86,21 @@
 /bootstrap/compiled.php
 /bootstrap/environment.php
 /vendor
-/node_modules
-/.DS_Store
-Thumbs.db
-/.env
-/.env.development.php
-/.env.php
 /docs/_build
 /error_log
 /auth.json
 /public/error_log
 
-/ninja.sublime-project
-/ninja.sublime-workspace
-/.phpstorm.meta.php
-/_ide_helper.php
-/.idea
-/.project
-tests/_output/
-tests/_bootstrap.php
-tests/_support/_generated/
 
-# composer stuff
-/c3.php
 
-_ide_helper.php
+
+#     OS generated files         #
+##################################
+.DS_Store
+.DS_Store?
+# ._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+/composer.lock

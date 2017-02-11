@@ -5,43 +5,7 @@ namespace App\Models\Core;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="SettingsEmail",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="template",
- *          description="template",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="sys_email",
- *          description="sys_email",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="alert_email",
- *          description="alert_email",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="admin_email",
- *          description="admin_email",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="mta",
- *          description="mta",
- *          type="string"
- *      )
- * )
- */
+
 class SettingsEmail extends Model
 {
     use SoftDeletes;

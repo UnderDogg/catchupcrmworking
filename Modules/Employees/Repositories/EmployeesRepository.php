@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Employees;
 
-use App\Models\Employees\Employees;
+use Modules\Employees\Models\Employees;
 use InfyOm\Generator\Common\BaseRepository;
 
 class EmployeesRepository extends BaseRepository

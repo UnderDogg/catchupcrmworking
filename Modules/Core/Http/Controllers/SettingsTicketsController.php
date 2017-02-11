@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\SettingsTicketsDataTable;
+use Modules\Core\DataTables\Core\SettingsTicketsDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateSettingsTicketsRequest;
 use App\Http\Requests\Core\UpdateSettingsTicketsRequest;
 use App\Repositories\Core\SettingsTicketsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class SettingsTicketsController extends AppBaseController

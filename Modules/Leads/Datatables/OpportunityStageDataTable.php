@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Leads;
+namespace Modules\Leads\DataTables\Leads;
 
-use App\Models\Leads\OpportunityStage;
+use Modules\Leads\Models\OpportunityStage;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

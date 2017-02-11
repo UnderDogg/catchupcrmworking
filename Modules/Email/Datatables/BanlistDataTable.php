@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataTables\Email;
+namespace Modules\Email\DataTables\Email;
 
 use App\Models\Email\Banlist;
 use Form;

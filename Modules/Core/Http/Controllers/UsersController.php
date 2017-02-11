@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\UsersDataTable;
+use Modules\Core\DataTables\Core\UsersDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateUsersRequest;
 use App\Http\Requests\Core\UpdateUsersRequest;
 use App\Repositories\Core\UsersRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class UsersController extends AppBaseController

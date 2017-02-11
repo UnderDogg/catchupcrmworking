@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Email;
 
-use App\DataTables\Email\MailtemplatesSetsDataTable;
+use Modules\Email\DataTables\Email\MailtemplatesSetsDataTable;
 use App\Http\Requests\Email;
 use App\Http\Requests\Email\CreateMailtemplatesSetsRequest;
 use App\Http\Requests\Email\UpdateMailtemplatesSetsRequest;
 use App\Repositories\Email\MailtemplatesSetsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class MailtemplatesSetsController extends AppBaseController

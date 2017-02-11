@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Workflows;
+namespace Modules\Workflows\DataTables;
 
-use App\Models\Workflows\WorkflowRules;
+use Modules\Workflows\Models\WorkflowRules;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

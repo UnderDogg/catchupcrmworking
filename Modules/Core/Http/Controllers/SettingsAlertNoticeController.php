@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\SettingsAlertNoticeDataTable;
+use Modules\Core\DataTables\Core\SettingsAlertNoticeDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateSettingsAlertNoticeRequest;
 use App\Http\Requests\Core\UpdateSettingsAlertNoticeRequest;
 use App\Repositories\Core\SettingsAlertNoticeRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class SettingsAlertNoticeController extends AppBaseController

@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Employees;
+namespace Modules\Employees\Http\Controllers;
 
-use App\DataTables\Employees\TeamStaffDataTable;
+use Modules\Employees\DataTables\Employees\TeamStaffDataTable;
 use App\Http\Requests\Employees;
 use App\Http\Requests\Employees\CreateTeamStaffRequest;
 use App\Http\Requests\Employees\UpdateTeamStaffRequest;
 use App\Repositories\Employees\TeamStaffRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class TeamStaffController extends AppBaseController
@@ -39,7 +39,7 @@ class TeamStaffController extends AppBaseController
      */
     public function create()
     {
-        return view('employees.team_staffs.create');
+        return view('employees::team_staffs.create');
     }
 
     /**
@@ -77,7 +77,7 @@ class TeamStaffController extends AppBaseController
             return redirect(route('employees.teamStaffs.index'));
         }
 
-        return view('employees.team_staffs.show')->with('teamStaff', $teamStaff);
+        return view('employees::team_staffs.show')->with('teamStaff', $teamStaff);
     }
 
     /**
@@ -97,7 +97,7 @@ class TeamStaffController extends AppBaseController
             return redirect(route('employees.teamStaffs.index'));
         }
 
-        return view('employees.team_staffs.edit')->with('teamStaff', $teamStaff);
+        return view('employees::team_staffs.edit')->with('teamStaff', $teamStaff);
     }
 
     /**

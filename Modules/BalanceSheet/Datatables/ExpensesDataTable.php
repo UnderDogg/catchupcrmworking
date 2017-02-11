@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataTables\Balancesheet;
+namespace Modules\BalanceSheet\DataTables;
 
 use App\Models\Balancesheet\Expenses;
 use Form;

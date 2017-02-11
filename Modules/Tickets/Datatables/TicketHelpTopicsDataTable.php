@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataTables\Tickets;
+namespace Modules\Tickets\DataTables\Tickets;
 
 use App\Models\Tickets\TicketHelpTopics;
 use Form;

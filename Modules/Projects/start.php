@@ -13,5 +13,7 @@
 */
 
 if (!app()->routesAreCached()) {
-    require __DIR__ . '/Http/routes.php';
+    require __DIR__ . '/Routes/frontendroutes.php';
+    require __DIR__ . '/Routes/backendroutes.php';
+    require __DIR__ . '/Routes/apiroutes.php';
 }

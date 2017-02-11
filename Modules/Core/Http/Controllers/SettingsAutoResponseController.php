@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\SettingsAutoResponseDataTable;
+use Modules\Core\DataTables\Core\SettingsAutoResponseDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateSettingsAutoResponseRequest;
 use App\Http\Requests\Core\UpdateSettingsAutoResponseRequest;
 use App\Repositories\Core\SettingsAutoResponseRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class SettingsAutoResponseController extends AppBaseController

@@ -3,25 +3,11 @@
 namespace App\Models\Email;
 
 use Eloquent as Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentTaggable\Taggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="MailtemplatesTypes",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="name",
- *          description="name",
- *          type="string"
- *      )
- * )
- */
+
 class MailtemplatesTypes extends Model
 {
     use SoftDeletes;

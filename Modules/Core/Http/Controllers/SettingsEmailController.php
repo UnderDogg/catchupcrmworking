@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\SettingsEmailDataTable;
+use Modules\Core\DataTables\Core\SettingsEmailDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateSettingsEmailRequest;
 use App\Http\Requests\Core\UpdateSettingsEmailRequest;
 use App\Repositories\Core\SettingsEmailRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class SettingsEmailController extends AppBaseController

@@ -3,71 +3,11 @@
 namespace App\Models\Core;
 
 use Eloquent as Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentTaggable\Taggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="Companies",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="relation_id",
- *          description="relation_id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="company_name",
- *          description="company_name",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="website",
- *          description="website",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="phone",
- *          description="phone",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="address",
- *          description="address",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="landing_page",
- *          description="landing_page",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="offline_page",
- *          description="offline_page",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="thank_page",
- *          description="thank_page",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="logo",
- *          description="logo",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="use_logo",
- *          description="use_logo",
- *          type="string"
- *      )
- * )
- */
+
 class Companies extends Model
 {
     use SoftDeletes;

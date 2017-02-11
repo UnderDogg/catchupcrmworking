@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\PermissionsDataTable;
+use Modules\Core\DataTables\Core\PermissionsDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreatePermissionsRequest;
 use App\Http\Requests\Core\UpdatePermissionsRequest;
 use App\Repositories\Core\PermissionsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class PermissionsController extends AppBaseController

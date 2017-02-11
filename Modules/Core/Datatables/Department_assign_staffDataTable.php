@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataTables\Core;
+namespace Modules\Core\DataTables\Core;
 
 use App\Models\Core\Department_assign_staff;
 use Form;

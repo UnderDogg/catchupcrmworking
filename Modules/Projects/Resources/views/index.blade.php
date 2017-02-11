@@ -1,9 +1,23 @@
-@extends('projects::layouts.master')
+@extends('layouts.app')
 
 @section('content')
-    <h1>Hello World</h1>
+    <section class="content-header">
+        <h1 class="pull-left">Projects</h1>
+        <h1 class="pull-right">
+           <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('projects.projects.create') !!}">Add New</a>
+        </h1>
+    </section>
+    <div class="content">
+        <div class="clearfix"></div>
 
-    <p>
-        This view is loaded from module: {!! config('projects.name') !!}
-    </p>
-@stop
+        @include('flash::message')
+
+        <div class="clearfix"></div>
+        <div class="box box-primary">
+            <div class="box-body">
+                    @include('projects.projects.table')
+            </div>
+        </div>
+    </div>
+@endsection
+

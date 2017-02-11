@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Workflows;
+namespace Modules\Workflows\DataTables;
 
-use App\Models\Workflows\WorkflowClose;
+use Modules\Workflows\Models\WorkflowClose;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

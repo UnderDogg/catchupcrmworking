@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Invoices;
+namespace Modules\Invoices\DataTables\Invoices;
 
-use App\Models\Invoices\InvoiceItems;
+use Modules\Invoices\Models\InvoiceItem;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

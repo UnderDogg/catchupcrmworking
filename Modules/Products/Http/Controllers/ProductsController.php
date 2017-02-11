@@ -2,23 +2,39 @@
 
 namespace Modules\Products\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Routing\Controller;
+use Modules\Products\DataTables\Products\ProductsDataTable;
+use App\Http\Requests\Products;
+use App\Http\Requests\Products\CreateProductsRequest;
+use App\Http\Requests\Products\UpdateProductsRequest;
+use App\Repositories\Products\ProductsRepository;
+use Flash;
+use Modules\Core\Http\Controllers\AppBaseController;
+use Response;
 
-class ProductsController extends Controller
+class ProductsController extends AppBaseController
 {
-    /**
-     * Display a listing of the resource.
-     * @return Response
-     */
-    public function index()
+    /** @var  ProductsRepository */
+    private $productsRepository;
+
+    public function __construct(ProductsRepository $productsRepo)
     {
-        return view('products::index');
+        $this->productsRepository = $productsRepo;
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the Products.
+     *
+     * @param ProductsDataTable $productsDataTable
+     * @return Response
+     */
+    public function index(ProductsDataTable $productsDataTable)
+    {
+        return $productsDataTable->render('products.products.index');
+    }
+
+    /**
+     * Show the form for creating a new Products.
+     *
      * @return Response
      */
     public function create()
@@ -27,46 +43,109 @@ class ProductsController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     * @param  Request $request
+     * Store a newly created Products in storage.
+     *
+     * @param CreateProductsRequest $request
+     *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateProductsRequest $request)
     {
+        $input = $request->all();
+
+        $products = $this->productsRepository->create($input);
+
+        Flash::success('Products saved successfully.');
+
+        return redirect(route('products.products.index'));
     }
 
     /**
-     * Show the specified resource.
+     * Display the specified Products.
+     *
+     * @param  int $id
+     *
      * @return Response
      */
-    public function show()
+    public function show($id)
     {
-        return view('products::show');
+        $products = $this->productsRepository->findWithoutFail($id);
+
+        if (empty($products)) {
+            Flash::error('Products not found');
+
+            return redirect(route('products.products.index'));
+        }
+
+        return view('products::show')->with('products', $products);
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified Products.
+     *
+     * @param  int $id
+     *
      * @return Response
      */
-    public function edit()
+    public function edit($id)
     {
-        return view('products::edit');
+        $products = $this->productsRepository->findWithoutFail($id);
+
+        if (empty($products)) {
+            Flash::error('Products not found');
+
+            return redirect(route('products.products.index'));
+        }
+
+        return view('products::edit')->with('products', $products);
     }
 
     /**
-     * Update the specified resource in storage.
-     * @param  Request $request
+     * Update the specified Products in storage.
+     *
+     * @param  int              $id
+     * @param UpdateProductsRequest $request
+     *
      * @return Response
      */
-    public function update(Request $request)
+    public function update($id, UpdateProductsRequest $request)
     {
+        $products = $this->productsRepository->findWithoutFail($id);
+
+        if (empty($products)) {
+            Flash::error('Products not found');
+
+            return redirect(route('products.products.index'));
+        }
+
+        $products = $this->productsRepository->update($request->all(), $id);
+
+        Flash::success('Products updated successfully.');
+
+        return redirect(route('products.products.index'));
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified Products from storage.
+     *
+     * @param  int $id
+     *
      * @return Response
      */
-    public function destroy()
+    public function destroy($id)
     {
+        $products = $this->productsRepository->findWithoutFail($id);
+
+        if (empty($products)) {
+            Flash::error('Products not found');
+
+            return redirect(route('products.products.index'));
+        }
+
+        $this->productsRepository->delete($id);
+
+        Flash::success('Products deleted successfully.');
+
+        return redirect(route('products.products.index'));
     }
 }

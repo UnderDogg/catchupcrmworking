@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Email;
 
-use App\DataTables\Email\BanlistDataTable;
+use Modules\Email\DataTables\Email\BanlistDataTable;
 use App\Http\Requests\Email;
 use App\Http\Requests\Email\CreateBanlistRequest;
 use App\Http\Requests\Email\UpdateBanlistRequest;
 use App\Repositories\Email\BanlistRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class BanlistController extends AppBaseController

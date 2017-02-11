@@ -5,30 +5,7 @@ namespace App\Models\Core;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="Department_assign_staff",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="department_id",
- *          description="department_id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="staff_id",
- *          description="staff_id",
- *          type="integer",
- *          format="int32"
- *      )
- * )
- */
+
 class Department_assign_staff extends Model
 {
     use SoftDeletes;

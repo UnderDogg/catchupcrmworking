@@ -5,29 +5,7 @@ namespace App\Models\Core;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="TaggableTaggables",
- *      required={""},
- *      @SWG\Property(
- *          property="tag_id",
- *          description="tag_id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="taggable_id",
- *          description="taggable_id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="taggable_type",
- *          description="taggable_type",
- *          type="string"
- *      )
- * )
- */
+
 class TaggableTaggables extends Model
 {
     use SoftDeletes;

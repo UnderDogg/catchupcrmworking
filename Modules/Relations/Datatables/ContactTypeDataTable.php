@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Relations;
+namespace Modules\Relations\DataTables;
 
-use App\Models\Relations\ContactType;
+use Modules\Relations\Models\ContactType;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

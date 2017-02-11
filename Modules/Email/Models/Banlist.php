@@ -5,28 +5,7 @@ namespace App\Models\Email;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="Banlist",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="email_address",
- *          description="email_address",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="internal_notes",
- *          description="internal_notes",
- *          type="string"
- *      )
- * )
- */
+
 class Banlist extends Model
 {
     use SoftDeletes;

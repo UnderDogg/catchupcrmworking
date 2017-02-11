@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories\Banking;
+namespace Modules\Banking\Repositories;
 
 use App\Models\Banking\Payments;
 use InfyOm\Generator\Common\BaseRepository;
 
-class PaymentsRepository extends BaseRepository
+class PaymentsRepository
 {
     /**
      * @var array

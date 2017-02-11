@@ -5,18 +5,7 @@ namespace App\Models\Core;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="SettingsAlertNotice",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      )
- * )
- */
+
 class SettingsAlertNotice extends Model
 {
     use SoftDeletes;

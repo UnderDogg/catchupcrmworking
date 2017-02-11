@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\ActivityPriorityDataTable;
+use Modules\Core\DataTables\Core\ActivityPriorityDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateActivityPriorityRequest;
 use App\Http\Requests\Core\UpdateActivityPriorityRequest;
 use App\Repositories\Core\ActivityPriorityRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class ActivityPriorityController extends AppBaseController

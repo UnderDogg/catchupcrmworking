@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\ActivityStatusDataTable;
+use Modules\Core\DataTables\Core\ActivityStatusDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateActivityStatusRequest;
 use App\Http\Requests\Core\UpdateActivityStatusRequest;
 use App\Repositories\Core\ActivityStatusRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class ActivityStatusController extends AppBaseController

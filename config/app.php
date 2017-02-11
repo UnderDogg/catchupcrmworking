@@ -152,6 +152,11 @@ return [
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
         Illuminate\Hashing\HashServiceProvider::class,
         Illuminate\Mail\MailServiceProvider::class,
+
+        /*'Illuminate\Mail\MailServiceProvider',
+        And replace it with:
+        'Postmark\Adapters\LaravelMailProvider',*/
+
         Illuminate\Notifications\NotificationServiceProvider::class,
         Illuminate\Pagination\PaginationServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,
@@ -169,8 +174,26 @@ return [
         Nwidart\Modules\LaravelModulesServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         MaddHatter\LaravelFullcalendar\ServiceProvider::class,
-        //
+        Collective\Html\HtmlServiceProvider::class,
+        Caffeinated\Flash\FlashServiceProvider::class,
+        Caffeinated\Menus\MenusServiceProvider::class,
+        Caffeinated\Themes\ThemesServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Former\FormerServiceProvider::class,
+        Arcanedev\Settings\SettingsServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Cviebrock\EloquentTaggable\ServiceProvider::class,
+        Baum\Providers\BaumServiceProvider::class,
+        GrahamCampbell\Markdown\MarkdownServiceProvider::class,
+        Jaybizzle\LaravelCrawlerDetect\LaravelCrawlerDetectServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Maatwebsite\Sidebar\SidebarServiceProvider::class,
+        Stevebauman\Purify\PurifyServiceProvider::class,
+        Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class,
+        //YAAP\Theme\ThemeServiceProvider::class,
 
+        //
         /*
          * Application Service Providers...
          */
@@ -179,7 +202,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
     ],
 
     /*
@@ -231,9 +253,32 @@ return [
         /*
          * Package Facades...
          */
-        'Module' => Nwidart\Modules\Facades\Module::class,
-        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
 
+        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
+        'Crawler'   => 'Jaybizzle\LaravelCrawlerDetect\Facades\LaravelCrawlerDetect',
+
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+
+        'Flash' => Caffeinated\Flash\Facades\Flash::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+
+        'Former' => Former\Facades\Former::class,
+
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
+        'Menu' => Caffeinated\Menus\Facades\Menu::class,
+        'Module' => Nwidart\Modules\Facades\Module::class,
+
+        'Purify' => Stevebauman\Purify\Facades\Purify::class,
+        'PushNotification' => Davibennun\LaravelPushNotification\Facades\PushNotification::class,
+
+        'Setting' => Arcanedev\Settings\Facades\Setting::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
+        'Theme' => Caffeinated\Themes\Facades\Theme::class,
+        //'Theme' => YAAP\Theme\Facades\Theme::class
 
     ],
 

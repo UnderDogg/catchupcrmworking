@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Taxes;
+namespace Modules\Taxes\DataTables\Taxes;
 
-use App\Models\Taxes\TaxRates;
+use Modules\Taxes\Models\TaxRate;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

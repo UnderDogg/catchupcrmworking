@@ -3,25 +3,11 @@
 namespace App\Models\Core;
 
 use Eloquent as Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentTaggable\Taggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="ActivityStatus",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="value",
- *          description="value",
- *          type="string"
- *      )
- * )
- */
+
 class ActivityStatus extends Model
 {
     use SoftDeletes;

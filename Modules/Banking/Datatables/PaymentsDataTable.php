@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataTables\Banking;
+namespace Modules\Banking\DataTables\Banking;
 
 use App\Models\Banking\Payments;
 use Form;

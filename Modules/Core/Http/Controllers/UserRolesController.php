@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\UserRolesDataTable;
+use Modules\Core\DataTables\Core\UserRolesDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateUserRolesRequest;
 use App\Http\Requests\Core\UpdateUserRolesRequest;
 use App\Repositories\Core\UserRolesRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class UserRolesController extends AppBaseController

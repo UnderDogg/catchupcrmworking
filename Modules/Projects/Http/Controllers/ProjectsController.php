@@ -2,71 +2,150 @@
 
 namespace Modules\Projects\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Illuminate\Routing\Controller;
+use Modules\Projects\DataTables\Projects\ProjectsDataTable;
+use App\Http\Requests\Projects;
+use App\Http\Requests\Projects\CreateProjectsRequest;
+use App\Http\Requests\Projects\UpdateProjectsRequest;
+use Modules\Projects\Repositories\ProjectsRepository;
+use Flash;
+use Modules\Core\Http\Controllers\AppBaseController;
+use Response;
 
-class ProjectsController extends Controller
+class ProjectsController extends AppBaseController
 {
-    /**
-     * Display a listing of the resource.
-     * @return Response
-     */
-    public function index()
+    /** @var  ProjectsRepository */
+    private $projectsRepository;
+
+    public function __construct(ProjectsRepository $projectsRepo)
     {
-        return view('projects::index');
+        $this->projectsRepository = $projectsRepo;
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display a listing of the Projects.
+     *
+     * @param ProjectsDataTable $projectsDataTable
+     * @return Response
+     */
+    public function index(ProjectsDataTable $projectsDataTable)
+    {
+        return $projectsDataTable->render('projects.projects.index');
+    }
+
+    /**
+     * Show the form for creating a new Projects.
+     *
      * @return Response
      */
     public function create()
     {
-        return view('projects::create');
+        return view('projects.projects.create');
     }
 
     /**
-     * Store a newly created resource in storage.
-     * @param  Request $request
+     * Store a newly created Projects in storage.
+     *
+     * @param CreateProjectsRequest $request
+     *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(CreateProjectsRequest $request)
     {
+        $input = $request->all();
+
+        $projects = $this->projectsRepository->create($input);
+
+        Flash::success('Projects saved successfully.');
+
+        return redirect(route('projects.projects.index'));
     }
 
     /**
-     * Show the specified resource.
+     * Display the specified Projects.
+     *
+     * @param  int $id
+     *
      * @return Response
      */
-    public function show()
+    public function show($id)
     {
-        return view('projects::show');
+        $projects = $this->projectsRepository->findWithoutFail($id);
+
+        if (empty($projects)) {
+            Flash::error('Projects not found');
+
+            return redirect(route('projects.projects.index'));
+        }
+
+        return view('projects.projects.show')->with('projects', $projects);
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified Projects.
+     *
+     * @param  int $id
+     *
      * @return Response
      */
-    public function edit()
+    public function edit($id)
     {
-        return view('projects::edit');
+        $projects = $this->projectsRepository->findWithoutFail($id);
+
+        if (empty($projects)) {
+            Flash::error('Projects not found');
+
+            return redirect(route('projects.projects.index'));
+        }
+
+        return view('projects.projects.edit')->with('projects', $projects);
     }
 
     /**
-     * Update the specified resource in storage.
-     * @param  Request $request
+     * Update the specified Projects in storage.
+     *
+     * @param  int              $id
+     * @param UpdateProjectsRequest $request
+     *
      * @return Response
      */
-    public function update(Request $request)
+    public function update($id, UpdateProjectsRequest $request)
     {
+        $projects = $this->projectsRepository->findWithoutFail($id);
+
+        if (empty($projects)) {
+            Flash::error('Projects not found');
+
+            return redirect(route('projects.projects.index'));
+        }
+
+        $projects = $this->projectsRepository->update($request->all(), $id);
+
+        Flash::success('Projects updated successfully.');
+
+        return redirect(route('projects.projects.index'));
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified Projects from storage.
+     *
+     * @param  int $id
+     *
      * @return Response
      */
-    public function destroy()
+    public function destroy($id)
     {
+        $projects = $this->projectsRepository->findWithoutFail($id);
+
+        if (empty($projects)) {
+            Flash::error('Projects not found');
+
+            return redirect(route('projects.projects.index'));
+        }
+
+        $this->projectsRepository->delete($id);
+
+        Flash::success('Projects deleted successfully.');
+
+        return redirect(route('projects.projects.index'));
     }
 }

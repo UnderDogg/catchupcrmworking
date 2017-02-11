@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Balancesheet;
 
-use App\Models\Balancesheet\ExpenseCategories;
+use App\Models\Balancesheet\ExpenseCategory;
 use InfyOm\Generator\Common\BaseRepository;
 
 class ExpenseCategoriesRepository extends BaseRepository
@@ -23,6 +23,6 @@ class ExpenseCategoriesRepository extends BaseRepository
      **/
     public function model()
     {
-        return ExpenseCategories::class;
+        return ExpenseCategory::class;
     }
 }

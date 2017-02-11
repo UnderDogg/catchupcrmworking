@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Leads;
+namespace Modules\Leads\DataTables\Leads;
 
-use App\Models\Leads\Leads;
+use Modules\Leads\Models\Leads;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

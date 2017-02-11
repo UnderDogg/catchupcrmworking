@@ -5,34 +5,7 @@ namespace App\Models\Core;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="UserSettings",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="name",
- *          description="name",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="value",
- *          description="value",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="userid",
- *          description="userid",
- *          type="integer",
- *          format="int32"
- *      )
- * )
- */
+
 class UserSettings extends Model
 {
     use SoftDeletes;

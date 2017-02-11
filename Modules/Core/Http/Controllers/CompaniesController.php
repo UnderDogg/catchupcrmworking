@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\CompaniesDataTable;
+use Modules\Core\DataTables\Core\CompaniesDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateCompaniesRequest;
 use App\Http\Requests\Core\UpdateCompaniesRequest;
 use App\Repositories\Core\CompaniesRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class CompaniesController extends AppBaseController

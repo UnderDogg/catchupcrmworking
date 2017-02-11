@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\TeamAssignsDataTable;
+use Modules\Core\DataTables\Core\TeamAssignsDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateTeamAssignsRequest;
 use App\Http\Requests\Core\UpdateTeamAssignsRequest;
 use App\Repositories\Core\TeamAssignsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class TeamAssignsController extends AppBaseController

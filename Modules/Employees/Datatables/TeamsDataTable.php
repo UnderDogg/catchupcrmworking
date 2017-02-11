@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Employees;
+namespace Modules\Employees\DataTables\Employees;
 
-use App\Models\Employees\Teams;
+use Modules\Employees\Models\Teams;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

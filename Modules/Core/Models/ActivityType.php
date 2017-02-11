@@ -5,23 +5,7 @@ namespace App\Models\Core;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="ActivityType",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="value",
- *          description="value",
- *          type="string"
- *      )
- * )
- */
+
 class ActivityType extends Model
 {
     use SoftDeletes;

@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\ActivityTypeDataTable;
+use Modules\Core\DataTables\Core\ActivityTypeDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateActivityTypeRequest;
 use App\Http\Requests\Core\UpdateActivityTypeRequest;
 use App\Repositories\Core\ActivityTypeRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class ActivityTypeController extends AppBaseController

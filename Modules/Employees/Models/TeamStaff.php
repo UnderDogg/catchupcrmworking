@@ -1,34 +1,11 @@
 <?php
 
-namespace App\Models\Employees;
+namespace Modules\Employees\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="TeamStaff",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="team_id",
- *          description="team_id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="staff_id",
- *          description="staff_id",
- *          type="integer",
- *          format="int32"
- *      )
- * )
- */
+
 class TeamStaff extends Model
 {
     use SoftDeletes;
@@ -72,7 +49,7 @@ class TeamStaff extends Model
      **/
     public function staff()
     {
-        return $this->belongsTo(\App\Models\Employees\Staff::class);
+        return $this->belongsTo(\Modules\Employees\Models\Staff::class);
     }
 
     /**
@@ -80,6 +57,6 @@ class TeamStaff extends Model
      **/
     public function team()
     {
-        return $this->belongsTo(\App\Models\Employees\Team::class);
+        return $this->belongsTo(\Modules\Employees\Models\Team::class);
     }
 }

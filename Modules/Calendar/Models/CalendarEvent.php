@@ -2,6 +2,8 @@
 namespace Modules\Calendar\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentTaggable\Taggable;
 use MaddHatter\LaravelFullcalendar\Event;
 
 class CalendarEvent extends Model implements Event

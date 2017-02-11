@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\DepartmentsDataTable;
+use Modules\Core\DataTables\Core\DepartmentsDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateDepartmentsRequest;
 use App\Http\Requests\Core\UpdateDepartmentsRequest;
 use App\Repositories\Core\DepartmentsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class DepartmentsController extends AppBaseController

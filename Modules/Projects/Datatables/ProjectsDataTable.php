@@ -1,8 +1,8 @@
 <?php
 
-namespace App\DataTables\Projects;
+namespace Modules\Projects\DataTables\Projects;
 
-use App\Models\Projects\Projects;
+use Modules\Projects\Models\Project;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 

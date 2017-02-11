@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Employees;
 
-use App\Models\Employees\TeamStaff;
+use Modules\Employees\Models\TeamStaff;
 use InfyOm\Generator\Common\BaseRepository;
 
 class TeamStaffRepository extends BaseRepository

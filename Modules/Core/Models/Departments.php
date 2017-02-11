@@ -3,47 +3,11 @@
 namespace App\Models\Core;
 
 use Eloquent as Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentTaggable\Taggable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="Departments",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="name",
- *          description="name",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="departmenttype",
- *          description="departmenttype",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="slaplan_id",
- *          description="slaplan_id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="manager_id",
- *          description="manager_id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="department_signature",
- *          description="department_signature",
- *          type="string"
- *      )
- * )
- */
+
 class Departments extends Model
 {
     use SoftDeletes;

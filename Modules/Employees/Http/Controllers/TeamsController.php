@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Employees;
+namespace Modules\Employees\Http\Controllers;
 
-use App\DataTables\Employees\TeamsDataTable;
+use Modules\Employees\DataTables\Employees\TeamsDataTable;
 use App\Http\Requests\Employees;
 use App\Http\Requests\Employees\CreateTeamsRequest;
 use App\Http\Requests\Employees\UpdateTeamsRequest;
 use App\Repositories\Employees\TeamsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class TeamsController extends AppBaseController
@@ -39,7 +39,7 @@ class TeamsController extends AppBaseController
      */
     public function create()
     {
-        return view('employees.teams.create');
+        return view('employees::teams.create');
     }
 
     /**
@@ -77,7 +77,7 @@ class TeamsController extends AppBaseController
             return redirect(route('employees.teams.index'));
         }
 
-        return view('employees.teams.show')->with('teams', $teams);
+        return view('employees::teams.show')->with('teams', $teams);
     }
 
     /**
@@ -97,7 +97,7 @@ class TeamsController extends AppBaseController
             return redirect(route('employees.teams.index'));
         }
 
-        return view('employees.teams.edit')->with('teams', $teams);
+        return view('employees::teams.edit')->with('teams', $teams);
     }
 
     /**

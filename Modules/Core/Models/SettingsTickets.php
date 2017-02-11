@@ -5,63 +5,7 @@ namespace App\Models\Core;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/**
- * @SWG\Definition(
- *      definition="SettingsTickets",
- *      required={""},
- *      @SWG\Property(
- *          property="id",
- *          description="id",
- *          type="integer",
- *          format="int32"
- *      ),
- *      @SWG\Property(
- *          property="num_format",
- *          description="num_format",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="num_sequence",
- *          description="num_sequence",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="priority",
- *          description="priority",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="sla",
- *          description="sla",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="help_topic",
- *          description="help_topic",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="max_open_ticket",
- *          description="max_open_ticket",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="collision_avoid",
- *          description="collision_avoid",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="lock_ticket_frequency",
- *          description="lock_ticket_frequency",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="captcha",
- *          description="captcha",
- *          type="string"
- *      )
- * )
- */
+
 class SettingsTickets extends Model
 {
     use SoftDeletes;

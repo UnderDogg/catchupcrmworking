@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Balancesheet;
 
-use App\DataTables\Balancesheet\ExpensesDataTable;
+use Modules\BalanceSheet\DataTables\ExpensesDataTable;
 use App\Http\Requests\Balancesheet;
 use App\Http\Requests\Balancesheet\CreateExpensesRequest;
 use App\Http\Requests\Balancesheet\UpdateExpensesRequest;
 use App\Repositories\Balancesheet\ExpensesRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class ExpensesController extends AppBaseController

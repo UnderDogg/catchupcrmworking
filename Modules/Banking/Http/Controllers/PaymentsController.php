@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Banking;
+namespace Modules\Banking\Http\Controllers;
 
-use App\DataTables\Banking\PaymentsDataTable;
+use Modules\Banking\DataTables\Banking\PaymentsDataTable;
 use App\Http\Requests\Banking;
 use App\Http\Requests\Banking\CreatePaymentsRequest;
 use App\Http\Requests\Banking\UpdatePaymentsRequest;
 use App\Repositories\Banking\PaymentsRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class PaymentsController extends AppBaseController

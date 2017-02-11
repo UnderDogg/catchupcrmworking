@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\SettingsSystemDataTable;
+use Modules\Core\DataTables\Core\SettingsSystemDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateSettingsSystemRequest;
 use App\Http\Requests\Core\UpdateSettingsSystemRequest;
 use App\Repositories\Core\SettingsSystemRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class SettingsSystemController extends AppBaseController

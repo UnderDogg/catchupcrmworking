@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\TaggableTaggablesDataTable;
+use Modules\Core\DataTables\Core\TaggableTaggablesDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateTaggableTaggablesRequest;
 use App\Http\Requests\Core\UpdateTaggableTaggablesRequest;
 use App\Repositories\Core\TaggableTaggablesRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class TaggableTaggablesController extends AppBaseController

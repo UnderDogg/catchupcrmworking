@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Email;
 
-use App\DataTables\Email\MailboxesDataTable;
+use Modules\Email\DataTables\Email\MailboxesDataTable;
 use App\Http\Requests\Email;
 use App\Http\Requests\Email\CreateMailboxesRequest;
 use App\Http\Requests\Email\UpdateMailboxesRequest;
 use App\Repositories\Email\MailboxesRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class MailboxesController extends AppBaseController

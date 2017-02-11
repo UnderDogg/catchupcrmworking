@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Core;
+namespace Modules\Core\Http\Controllers;
 
-use App\DataTables\Core\Department_assign_staffDataTable;
+use Modules\Core\DataTables\Core\Department_assign_staffDataTable;
 use App\Http\Requests\Core;
 use App\Http\Requests\Core\CreateDepartment_assign_staffRequest;
 use App\Http\Requests\Core\UpdateDepartment_assign_staffRequest;
 use App\Repositories\Core\Department_assign_staffRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class Department_assign_staffController extends AppBaseController

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataTables\Products;
+namespace Modules\Products\DataTables\Products;
 
 use App\Models\Products\Products;
 use Form;

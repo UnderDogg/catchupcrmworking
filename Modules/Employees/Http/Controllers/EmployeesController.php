@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Employees;
+namespace Modules\Employees\Http\Controllers;
 
-use App\DataTables\Employees\EmployeesDataTable;
+use Modules\Employees\DataTables\Employees\EmployeesDataTable;
 use App\Http\Requests\Employees;
 use App\Http\Requests\Employees\CreateEmployeesRequest;
 use App\Http\Requests\Employees\UpdateEmployeesRequest;
 use App\Repositories\Employees\EmployeesRepository;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use Modules\Core\Http\Controllers\AppBaseController;
 use Response;
 
 class EmployeesController extends AppBaseController
@@ -39,7 +39,7 @@ class EmployeesController extends AppBaseController
      */
     public function create()
     {
-        return view('employees.employees.create');
+        return view('employees::employees.create');
     }
 
     /**
@@ -77,7 +77,7 @@ class EmployeesController extends AppBaseController
             return redirect(route('employees.employees.index'));
         }
 
-        return view('employees.employees.show')->with('employees', $employees);
+        return view('employees::employees.show')->with('employees', $employees);
     }
 
     /**
@@ -97,7 +97,7 @@ class EmployeesController extends AppBaseController
             return redirect(route('employees.employees.index'));
         }
 
-        return view('employees.employees.edit')->with('employees', $employees);
+        return view('employees::employees.edit')->with('employees', $employees);
     }
 
     /**
